@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(void){int n,a[100],x,i;printf("Enter number of elements: ");if(scanf("%d",&n)!=1||n<0||n>=100)return 1;printf("Enter %d sorted elements: ",n);for(i=0;i<n;i++)scanf("%d",&a[i]);printf("Enter element to insert: ");scanf("%d",&x);i=n-1;while(i>=0&&a[i]>x){a[i+1]=a[i];i--;}a[i+1]=x;n++;printf("Array after insertion: ");for(i=0;i<n;i++)printf("%d%s",a[i],i==n-1?"\n":" ");return 0;}

@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(void){int n1,n2,a[100],b[100],c[200];printf("Enter size of first array: ");if(scanf("%d",&n1)!=1||n1<1||n1>100)return 1;printf("Enter %d elements: ",n1);for(int i=0;i<n1;i++)scanf("%d",&a[i]);printf("Enter size of second array: ");if(scanf("%d",&n2)!=1||n2<1||n2>100)return 1;printf("Enter %d elements: ",n2);for(int i=0;i<n2;i++)scanf("%d",&b[i]);for(int i=0;i<n1;i++)c[i]=a[i];for(int i=0;i<n2;i++)c[n1+i]=b[i];printf("Merged array: ");for(int i=0;i<n1+n2;i++)printf("%d%s",c[i],i==n1+n2-1?"\n":" ");return 0;}

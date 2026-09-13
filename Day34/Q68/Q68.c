@@ -1,0 +1,2 @@
+#include <stdio.h>
+int main(void){int n,a[100],x,p=-1;printf("Enter number of elements: ");if(scanf("%d",&n)!=1||n<1||n>100)return 1;printf("Enter %d elements: ",n);for(int i=0;i<n;i++)scanf("%d",&a[i]);printf("Enter element to delete: ");scanf("%d",&x);for(int i=0;i<n;i++)if(a[i]==x){p=i;break;}if(p<0){printf("%d not found in the array.\n",x);return 0;}for(int i=p;i<n-1;i++)a[i]=a[i+1];n--;printf("Array after deletion:");for(int i=0;i<n;i++)printf(" %d",a[i]);printf("\n");return 0;}
